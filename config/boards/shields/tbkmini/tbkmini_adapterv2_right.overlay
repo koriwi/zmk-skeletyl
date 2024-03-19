@@ -10,10 +10,6 @@
 	col-offset = <5>;
 };
 
-&skeletyl_transform {
-	col-offset = <5>;
-};
-
 &kscan0 {
 	col-gpios
 		= <&pro_micro 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
