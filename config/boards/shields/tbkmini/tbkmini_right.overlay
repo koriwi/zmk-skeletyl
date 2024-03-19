@@ -7,15 +7,15 @@
 #include "tbkmini.dtsi"
 
 &default_transform {
-	col-offset = <5>;
+  col-offset = <5>;
 };
 
 &kscan0 {
-	col-gpios
-		, <&pro_micro_d  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		, <&pro_micro_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		= <&pro_micro_d 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
-		;
+  col-gpios
+    , <&pro_micro_d  8 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&pro_micro_d  7 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&pro_micro_d  6 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    , <&pro_micro_d 10 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+    = <&pro_micro_d 20 (GPIO_ACTIVE_HIGH | GPIO_PULL_DOWN)>
+  ;
 };
