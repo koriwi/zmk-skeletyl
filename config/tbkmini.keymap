@@ -80,6 +80,26 @@
             bindings = <&mkp RCLK>;
             key-positions = <17 18>;
         };
+
+        Arrowup {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <2 3>;
+        };
+
+        Arrowdown {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <13 12>;
+        };
+
+        Arrowright {
+            bindings = <&kp RIGHT_ARROW>;
+            key-positions = <13 14>;
+        };
+
+        Arrowleft {
+            bindings = <&kp LEFT_ARROW>;
+            key-positions = <11 12>;
+        };
     };
 
     keymap {
@@ -114,10 +134,10 @@
 
         tri_layer {
             bindings = <
-&sys_reset   &trans          &kp UP_ARROW    &trans           &bt BT_SEL 0    &out OUT_USB  &out OUT_BLE  &none         &trans           &sys_reset
-&bootloader  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &bt BT_SEL 1    &kp LEFT      &kp DOWN      &kp UP_ARROW  &kp RIGHT_ARROW  &bootloader
-&trans       &trans          &bt BT_CLR_ALL  &bt BT_CLR       &bt BT_SEL 2    &trans        &trans        &trans        &trans           &trans
-                             &none           &trans           &trans          &trans        &trans        &none
+&sys_reset   &trans  &none           &trans      &bt BT_SEL 0    &out OUT_USB  &out OUT_BLE  &none   &trans  &sys_reset
+&bootloader  &none   &none           &none       &bt BT_SEL 1    &none         &none         &none   &none   &bootloader
+&trans       &trans  &bt BT_CLR_ALL  &bt BT_CLR  &bt BT_SEL 2    &trans        &trans        &trans  &trans  &trans
+                     &none           &trans      &trans          &trans        &trans        &none
             >;
         };
     };
