@@ -9,6 +9,8 @@
 #define HRML(k1,k2,k3,k4) &ht LSHFT k1  &ht LALT k2  &ht LCTRL k3  &ht LGUI k4
 #define HRMR(k1,k2,k3,k4) &ht RGUI k1  &ht RCTRL k2  &ht RALT k3  &ht RSHFT k4
 
+&mt { quick-tap-ms = <180>; };
+
 / {
     behaviors {
         ht: hold_tap {
@@ -38,7 +40,7 @@
         hrmod: hrmod {
             compatible = "zmk,behavior-hold-tap";
             #binding-cells = <2>;
-            flavor = "hold-preferred";
+            flavor = "tap-preferred";
             quick-tap-ms = <200>;
             tapping-term-ms = <200>;
             require-prior-idle-ms = <125>;
@@ -107,10 +109,10 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E               &kp R               &kp T     &kp Y             &kp U                        &kp I                    &kp O    &kp P
-&kp A  &kp S  &kp D               &kp F               &kp G     &kp H             &kp J                        &kp K                    &kp L    &hrmod RGUI SEMI
-&kp Z  &kp X  &kp C               &kp V               &kp B     &kp N             &kp M                        &kp COMMA                &kp DOT  &kp FSLH
-              &hrmod LCTRL SPACE  &hrmod LCTRL SPACE  &tdtab    &hrmod_l 1 ENTER  &hrmod LEFT_SHIFT BACKSPACE  &hrmod LSHIFT BACKSPACE
+&kp Q  &kp W  &kp E  &kp R               &kp T     &kp Y             &kp U                     &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D  &kp F               &kp G     &kp H             &kp J                     &kp K      &kp L    &hrmod RGUI SEMI
+&kp Z  &kp X  &kp C  &kp V               &kp B     &kp N             &kp M                     &kp COMMA  &kp DOT  &kp FSLH
+              &none  &hrmod LCTRL SPACE  &tdtab    &hrmod_l 1 ENTER  &mt LEFT_SHIFT BACKSPACE  &none
             >;
         };
 
